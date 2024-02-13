@@ -10,7 +10,6 @@ const AboutPage: React.FC = () => {
     const outerStyle = {
         backgroundColor: '#0B1412',
         display: 'flex',
-        height: '100%',
         alignItems: 'center',
         justifyContent: 'space-evenly',
     }
@@ -24,7 +23,7 @@ const AboutPage: React.FC = () => {
         height: 350,
         alignItems: 'center',
         justifyContent: 'center',
-        transition: 'box-shadow 0.3s ease-in-out, transform 0.8s ease-in-out', 
+        transition: 'box-shadow 0.2s ease-in-out, transform 0.8s ease-in-out', 
         boxShadow: boxShadow, 
         transform: boxPosition,
         cursor: 'pointer',
@@ -63,7 +62,7 @@ const AboutPage: React.FC = () => {
             </div>
             <div className='aboutBrandon'>
                 <div style={styleTest} onMouseOver={handleHover} onMouseLeave={handleLeave} onClick={handleExit} className='brandonPhoto'>
-                    <img style={circularImage} src={brandonImage}/>
+                    <img style={circularImage} src={brandonImage} alt='Brandon'/>
                 </div>
             </div>
         </div>
