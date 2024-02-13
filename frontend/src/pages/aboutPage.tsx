@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import '../styles/aboutPage.css';
 import brandonImage from '../assets/BArsenault.jpg';
+import davidImage from '../assets/DClaphan.jpg';
+
 
 
 const AboutPage: React.FC = () => {
@@ -15,7 +17,7 @@ const AboutPage: React.FC = () => {
         <div id='about-outer-div'>
             <div className='about-individual'>
                 <div id={`avatar-david${davidClick ? '-clicked':''}`} className='avatar-div' onClick={handleAvatarClick} >
-                    David Photo Here
+                    <img className='circular-avatar-image' src={davidImage} alt='David'/>
                 </div>
             </div>
             <div className='about-individual'>
