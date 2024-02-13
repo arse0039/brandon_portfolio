@@ -14,11 +14,16 @@
 
 li {
     list-style: none;
+
+}
+
+a {
     color: #fff;
     font-size: 1.5rem;
 }
 
-li:hover {
+
+a:hover {
     color:orange;
 }
 
