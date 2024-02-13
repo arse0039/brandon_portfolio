@@ -1,0 +1,24 @@
+.Nav-bar {
+    background-color: rgb(94, 87, 87);
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.Nav-list {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+li {
+    list-style: none;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+li:hover {
+    color:orange;
+}
+
