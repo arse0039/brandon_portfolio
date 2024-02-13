@@ -1,0 +1,48 @@
+
+#about-outer-div {
+    background-color: #0B1412;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.avatar-div {
+    display: flex;
+    background-color: #fff; /* placeholder until images are in */
+    margin: 15px 0;
+    border-radius: 50%;
+    width: 350px;
+    height: 350px;
+    align-items: center;
+    justify-content: center;
+    transition: box-shadow 0.12s ease-in-out, transform 0.8s ease-in-out; 
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.avatar-div:hover {
+    box-shadow: 0 0 25px 15px rgba(0, 113, 113, 0.8);
+}
+
+#avatar-david {
+    transform: translateX(0) scale(1);
+}
+
+#avatar-david-clicked {
+    transform: translateX(-200px) scale(0.5);
+}
+
+#avatar-brandon {
+    transform: translateX(0) scale(1);
+}
+
+#avatar-brandon-clicked {
+    transform: translateX(200px) scale(0.5);
+}
+
+.circular-avatar-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid #282c34;
+}
