@@ -1,30 +1,32 @@
-import React from 'react';
-import { CCard, CCardTitle, CCardBody, CButton, CCardText, CCardImage } from '@coreui/react';
+import '../styles/cardCatalog.css';
+import { CCard, CCardTitle, CCardBody, CButton, CCardText, CCardImage, CCardFooter } from '@coreui/react';
 import projectImage from '../assets/project_placeholder.png'
 
-interface ProjectCardProps {
+export interface ProjectCardProps {
     projectName: string;
     projectDescription: string;
     projectSkills: string[];
-    github: string;
+    github?: string;
     url?: string;
 }
 
 
 export const ProjectCard = ( Project: ProjectCardProps) => {
     return (
-        <CCard style={{ width: '18rem' }}>
-            <CCardImage orientation="top" src={projectImage} />
+        <CCard className='custom-card'>
+            <CCardImage orientation="top" src={projectImage} className='card-image'/>
             <CCardBody>
-                <CCardTitle title={Project.projectName}></CCardTitle>
-                <CCardText>
+                <CCardTitle className='title'>{Project.projectName}</CCardTitle>
+                <CCardText className='description'>
                     {Project.projectDescription} 
                 </CCardText>
-                <CCardText>
-                    {Project.projectSkills}
-                </CCardText>
-                <CButton href={Project.github}>GitHub</CButton>
+                <CButton href={Project.github}target='_blank' className='button'>GitHub</CButton>
             </CCardBody>
+            <CCardFooter className='footer'>
+                {Project.projectSkills?.map((skill, index) => (
+                    <span key={index} className='skill'>{skill}</span>
+                ))}
+            </CCardFooter>
         </CCard>
     )
 }
