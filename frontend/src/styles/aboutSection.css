@@ -1,0 +1,20 @@
+.name {
+    display: inline-block;
+    margin: 10px 15px;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: monospace; /* Ensures equal width for each character */
+  }
+  
+  /* Optional: Add a blinking cursor at the end for a more realistic typing effect */
+  .name::after {
+    content: '|';
+    display: inline-block;
+    animation: cursorBlink 1s infinite step-start;
+  }
+  
+  @keyframes cursorBlink {
+    50% {
+      opacity: 0;
+    }
+  }

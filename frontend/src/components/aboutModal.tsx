@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/aboutModal.css';
+import AboutSection from './AboutSection';
 
 interface AboutModalProps {
     handleModalClose: (name:string) => void;
@@ -8,8 +9,14 @@ interface AboutModalProps {
 }
 
 const AboutModal = ({davidClicked, brandonClicked, handleModalClose}: AboutModalProps) => {
-
     const isExpanded = davidClicked || brandonClicked;
+    let name:string = '';
+    if (davidClicked) {
+        name = 'David Claphan';
+    } 
+    if (brandonClicked) {
+        name = 'Brandon Arsenault';
+    }
 
     const handleExitButtonClick = () => {
         davidClicked ? handleModalClose('david'):handleModalClose('brandon');
@@ -18,7 +25,7 @@ const AboutModal = ({davidClicked, brandonClicked, handleModalClose}: AboutModal
     return (
         <div className={`expandingDiv ${isExpanded ? 'expanded' : ''}`}>
             <button className='exit-button' onClick={handleExitButtonClick}> X </button>
-            <h1>This is the inner div!</h1>
+            <AboutSection name={name} />
         </div>
     )
 };

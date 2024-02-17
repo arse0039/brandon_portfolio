@@ -1,13 +1,13 @@
 .expandingDiv {
     position: absolute;
-    background-color: #DCF0EE;
+    background-color: #F4F4E2;
     opacity: 0.99;
     z-index: 11;
     width: 0vw;
     border-radius: 1%;
     overflow: hidden;
     height: 0vh; 
-    transition: width 0.4s ease-in-out, height 1.3s ease-in-out;
+    transition: width 0.4s ease-out, height 0.9s ease-in;
 }
 
 .expandingDiv.expanded {
