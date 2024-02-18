@@ -10,7 +10,6 @@
 
 .avatar-div {
     display: flex;
-    background-color: #fff; /* placeholder until images are in */
     margin: 15px 0;
     border-radius: 50%;
     width: 350px;
