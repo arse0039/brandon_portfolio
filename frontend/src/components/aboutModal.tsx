@@ -8,7 +8,7 @@ interface AboutModalProps {
     brandonClicked: boolean;
 }
 
-const AboutModal = ({davidClicked, brandonClicked, handleModalClose}: AboutModalProps) => {
+const AboutModal:React.FC<AboutModalProps> = ( {davidClicked, brandonClicked, handleModalClose} ) => {
     const isExpanded = davidClicked || brandonClicked;
     let name:string = '';
     if (davidClicked) {
