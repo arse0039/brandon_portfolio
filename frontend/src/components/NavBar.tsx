@@ -14,8 +14,7 @@ export const NavBar:React.FC<NavBarProps>= ( {navArray, handleClick} ) => {
                 {navArray.map((ele, i) => {
                     console.log(ele)
                     return (
-                    <li key={i} onClick={() => handleClick(ele.name)}>
-                        <div className='icon-container'>{ele.icon}</div>
+                    <li key={i} onClick={() => handleClick(ele.name)}>                        
                         {ele.name}
                     </li>
                 )})}

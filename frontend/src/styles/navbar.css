@@ -3,17 +3,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Jacquarda+Bastarda+9&display=swap');
 
 .Nav-bar {
-    background-color: #0B1412;
+    background: linear-gradient(15deg,#0B1412 0%, #0B1412 80%, #325451 97%);
     width: 100%;
-    height: 10vh;
+    height: 13vh;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
 }
 
 .Nav-list {
-    width: 100%;
+    width: 50%;
     display: flex;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    margin-right: 150px;
+    gap: 220px;
 }
 
 li {
@@ -21,24 +26,25 @@ li {
     font-family: "Roboto", sans-serif;
     list-style: none;
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.4rem;
     text-decoration: none;
     cursor: pointer;
-    transition: width 0.2s ease-in-out;
+    position: relative
 }
 
-.icon-container {
-    position:relative;
-    left: 25px;
-    opacity: 0;
-    transition: left 0.2s ease-in-out;
+li::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 2px; /* Adjust the height of the line as needed */
+    background-color: #219EBC; /* Adjust the color of the line */
+    transition: width 0.3s ease-out; /* Add a transition for a smooth effect */
 }
 
-li:hover {
-    color:#5f9995;
-}
-
-li:hover .icon-container {
-    left: -1px;
-    opacity: 0.8;
+li:hover::before {
+    width: 100%;
+    right: auto;
+    left: 0;
 }
