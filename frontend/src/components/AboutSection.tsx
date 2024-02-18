@@ -1,12 +1,16 @@
 import React, {useState, useEffect} from 'react';
+import { ModalProfile } from './ModalProfile';
+import { Profile } from '../constants/data';
+import { brandonProfile, davidProfile } from '../constants/data';
 import '../styles/aboutSection.css'
 
 interface AboutSectionProps {
     name: string;
+    isExpanded: boolean;
     
 }
 
-const AboutSection: React.FC<AboutSectionProps> = ({name}) => {
+const AboutSection: React.FC<AboutSectionProps> = ({name, isExpanded}) => {
     const [visibleName, setVisibleName] = useState<string>('');
 
     useEffect(() => {
@@ -23,9 +27,20 @@ const AboutSection: React.FC<AboutSectionProps> = ({name}) => {
         return () => clearTimeout(delay);
     },[name]);
 
+    const getProfile = (name:string):Profile => {
+        if (name == 'David Claphan'){
+            return davidProfile;
+        } else {
+            return brandonProfile;
+        }
+    }
+
     return (
         <div>
-            <h1 className='name'>{visibleName}</h1>
+            <div>
+                <h1 className='name'>{visibleName}</h1>
+            </div>
+            <ModalProfile bio={getProfile(name)} isExpanded={isExpanded} />
         </div>
     )
 }

@@ -3,10 +3,9 @@
     margin: 10px 15px;
     overflow: hidden;
     white-space: nowrap;
-    font-family: monospace; /* Ensures equal width for each character */
+    font-family: monospace; 
   }
   
-  /* Optional: Add a blinking cursor at the end for a more realistic typing effect */
   .name::after {
     content: '|';
     display: inline-block;
