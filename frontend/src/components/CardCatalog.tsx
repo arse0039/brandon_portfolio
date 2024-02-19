@@ -8,9 +8,9 @@ interface CardCatalogProps {
 export const CardCatalog = ( {projects}: CardCatalogProps) => {
     return (
         <div className='card-container'>
-             {projects.map((project, index) => (
+            {projects.map((project, index) => (
                     <ProjectCard key={index} {...project} />
-             ))}       
+            ))}       
         </div>
     );
 };

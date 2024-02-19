@@ -9,7 +9,7 @@ export interface ProjectCardProps {
     url?: string;
 }
 
-export const ProjectCard = ( Project: ProjectCardProps) => {
+export const ProjectCard = ( project: ProjectCardProps) => {
 
     const handleButtonClick = (link: string): void => {
         window.open(link, '_blank');
@@ -18,14 +18,14 @@ export const ProjectCard = ( Project: ProjectCardProps) => {
     return (
         <div className="custom-card">
             <div className="image-container">
-                <img src={Project.projectImage} alt={Project.projectName}></img>
+                <img src={project.projectImage} alt={project.projectName}></img>
             </div>
             <div className="card-content">
-                <h3>{Project.projectName} </h3>
-                <p>{Project.projectDescription}</p>
-                <button onClick={() => handleButtonClick(Project.github)}>Github</button>
+                <h3>{project.projectName} </h3>
+                <p>{project.projectDescription}</p>
+                <button onClick={() => handleButtonClick(project.github)}>Github</button>
                 <p>
-                    {Project.projectSkills?.map((skill, index) => (
+                    {project.projectSkills?.map((skill, index) => (
                         <span key={index} className='skill'>{skill}</span>
                     ))}
                 </p>

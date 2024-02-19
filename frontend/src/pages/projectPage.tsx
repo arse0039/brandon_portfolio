@@ -4,7 +4,10 @@ import { CardCatalog } from '../components/CardCatalog';
 
 const ProjectPage: React.FC = () => {
     return (
-        <CardCatalog projects={projects} />
+        <div className='outer-card-container'>
+            <CardCatalog projects={projects} />
+        </div>
+
     )
 }
 
