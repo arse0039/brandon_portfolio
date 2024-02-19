@@ -25,7 +25,7 @@ const AboutModal:React.FC<AboutModalProps> = ( {davidClicked, brandonClicked, ha
     return (
         <div className={`expandingDiv ${isExpanded ? 'expanded' : ''}`}>
             <button className='exit-button' onClick={handleExitButtonClick}> X </button>
-            <AboutSection name={name} />
+            <AboutSection name={name} isExpanded={isExpanded} />
         </div>
     )
 };
