@@ -1,0 +1,19 @@
+.name {
+    display: inline-block;
+    margin: 10px 15px;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: monospace; 
+  }
+  
+  .name::after {
+    content: '|';
+    display: inline-block;
+    animation: cursorBlink 1s infinite step-start;
+  }
+  
+  @keyframes cursorBlink {
+    50% {
+      opacity: 0;
+    }
+  }

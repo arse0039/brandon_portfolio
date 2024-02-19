@@ -1,0 +1,25 @@
+.home-page {
+  display: grid;
+  justify-content:left;
+  align-items: center;
+  height: 100vh;
+
+}
+
+.content {
+  margin-left: 100px;
+  margin-bottom: 400px;
+  color:#fff;
+  z-index: 1;
+}
+
+h1 {
+  font-size: 4.5rem;
+  margin: 0;
+}
+
+p {
+  font-size: 2.0rem;
+  margin-left: 20px;
+  line-height: 1.8rem;
+}
