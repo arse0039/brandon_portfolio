@@ -3,6 +3,7 @@ import { CCard, CCardTitle, CCardBody, CButton, CCardText, CCardImage, CCardFoot
 import projectImage from '../assets/project_placeholder.png'
 
 export interface ProjectCardProps {
+    projectImage: string;
     projectName: string;
     projectDescription: string;
     projectSkills: string[];
@@ -14,7 +15,7 @@ export interface ProjectCardProps {
 export const ProjectCard = ( Project: ProjectCardProps) => {
     return (
         <CCard className='custom-card'>
-            <CCardImage orientation="top" src={projectImage} className='card-image'/>
+            <CCardImage orientation="top" src={Project.projectImage} className='card-image'/>
             <CCardBody>
                 <CCardTitle className='title'>{Project.projectName}</CCardTitle>
                 <CCardText className='description'>
