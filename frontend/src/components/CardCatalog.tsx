@@ -1,5 +1,4 @@
 import '../styles/cardCatalog.css';
-import { CRow, CCol } from "@coreui/react";
 import { ProjectCard, ProjectCardProps } from "./Card";
 
 interface CardCatalogProps {
@@ -8,12 +7,10 @@ interface CardCatalogProps {
 
 export const CardCatalog = ( {projects}: CardCatalogProps) => {
     return (
-        <CRow className="card-catalog">
-            {projects.map((project, index) => (
-                <CCol md='4' key={index} className="card-column">
-                    <ProjectCard {...project} />       
-                </CCol>                
-            ))}
-        </CRow> 
-    )
-}
+        <div className='card-container'>
+             {projects.map((project, index) => (
+                    <ProjectCard key={index} {...project} />
+             ))}       
+        </div>
+    );
+};

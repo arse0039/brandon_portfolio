@@ -1,33 +1,35 @@
 import '../styles/cardCatalog.css';
-import { CCard, CCardTitle, CCardBody, CButton, CCardText, CCardImage, CCardFooter } from '@coreui/react';
-import projectImage from '../assets/project_placeholder.png'
 
 export interface ProjectCardProps {
     projectImage: string;
     projectName: string;
     projectDescription: string;
     projectSkills: string[];
-    github?: string;
+    github: string;
     url?: string;
 }
 
-
 export const ProjectCard = ( Project: ProjectCardProps) => {
+
+    const handleButtonClick = (link: string): void => {
+        window.open(link, '_blank');
+    };
+
     return (
-        <CCard className='custom-card'>
-            <CCardImage orientation="top" src={Project.projectImage} className='card-image'/>
-            <CCardBody>
-                <CCardTitle className='title'>{Project.projectName}</CCardTitle>
-                <CCardText className='description'>
-                    {Project.projectDescription} 
-                </CCardText>
-                <CButton href={Project.github}target='_blank' className='button'>GitHub</CButton>
-            </CCardBody>
-            <CCardFooter className='footer'>
-                {Project.projectSkills?.map((skill, index) => (
-                    <span key={index} className='skill'>{skill}</span>
-                ))}
-            </CCardFooter>
-        </CCard>
-    )
-}
+        <div className="custom-card">
+            <div className="image-container">
+                <img src={Project.projectImage} alt={Project.projectName}></img>
+            </div>
+            <div className="card-content">
+                <h3>{Project.projectName} </h3>
+                <p>{Project.projectDescription}</p>
+                <button onClick={() => handleButtonClick(Project.github)}>Github</button>
+                <p>
+                    {Project.projectSkills?.map((skill, index) => (
+                        <span key={index} className='skill'>{skill}</span>
+                    ))}
+                </p>
+            </div>
+        </div>
+    );
+};
