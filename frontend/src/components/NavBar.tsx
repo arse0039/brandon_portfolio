@@ -9,8 +9,9 @@ interface NavBarProps {
 
 export const NavBar:React.FC<NavBarProps>= ( {navArray, handleClick} ) => {
     return (
-        <nav className='Nav-bar'>
-            <ul className='Nav-list'>
+        <nav className='nav-bar'>
+            <div className='nav-logo'>BA/DC</div>
+            <ul className='nav-list'>
                 {navArray.map((ele, i) => {
                     console.log(ele)
                     return (

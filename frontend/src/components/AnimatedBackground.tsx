@@ -17,9 +17,9 @@ export const AnimatedBackground = () => {
     }, []);
 
     return (
-        <>
+        <div>
             {init && <Particles id="tsparticles" options={{preset:"firefly"}} />}
-        </>
+        </div>
     );
 };
 
