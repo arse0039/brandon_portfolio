@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../styles/aboutPage.css';
 import brandonImage from '../assets/BArsenault.jpg';
 import davidImage from '../assets/DClaphan.jpg';
-import AboutModal from '../components/AboutModal';
+import AboutModal from '../components/aboutModal';
 
 interface AboutPageProps {
     handleModalClick: () => void;
