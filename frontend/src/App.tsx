@@ -20,7 +20,7 @@ const App: React.FC = () => {
 
   return (      
     <div>
-      {displayModal && <TranslucentModalDiv/>}
+      {displayModal && <TranslucentModalDiv/>}     
       <NavBar navArray={navLinks} handleClick={handleLinkClick}/>
 
       {displayedPage === 'Home' && <HomePage/>}

@@ -1,9 +1,11 @@
 .Nav-bar {
+    position: fixed;
     background-color: rgb(94, 87, 87);
     width: 100%;
     height: 8vh;
     display: flex;
     align-items: center;
+    z-index: 100;
 }
 
 .Nav-list {
