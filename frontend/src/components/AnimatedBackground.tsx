@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
-import { loadLinksPreset } from "@tsparticles/preset-links";
-import { loadFirePreset } from "@tsparticles/preset-fire";
 import { loadFireflyPreset } from "@tsparticles/preset-firefly";
 
 
