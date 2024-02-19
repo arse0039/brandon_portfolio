@@ -1,18 +1,23 @@
 import React from 'react';
 import '../styles/navbar.css';
+import { NavLink } from '../constants/data';
 
 interface NavBarProps {
-    navArray:string[];
+    navArray:NavLink[];
     handleClick: (page:string) => void;
 };
 
-export const NavBar = ( {navArray, handleClick}:NavBarProps) => {
+export const NavBar:React.FC<NavBarProps>= ( {navArray, handleClick} ) => {
     return (
         <nav className='Nav-bar'>
             <ul className='Nav-list'>
-                {navArray.map((ele) => {
-                    return <li key={ele} onClick={() => handleClick(ele)}>{ele}</li>
-                })}
+                {navArray.map((ele, i) => {
+                    console.log(ele)
+                    return (
+                    <li key={i} onClick={() => handleClick(ele.name)}>                        
+                        {ele.name}
+                    </li>
+                )})}
             </ul>
         </nav>
     )

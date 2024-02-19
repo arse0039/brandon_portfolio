@@ -1,5 +1,12 @@
-export const navLinks = ['Home', 'About', 'Projects'];
+export interface NavLink {
+    name:string;
+}
 
+export const navLinks:NavLink[] = [
+    {name:'Home'}, 
+    {name:'About'}, 
+    {name:'Projects'},
+];
 
 export interface Profile {
     intro: string;
