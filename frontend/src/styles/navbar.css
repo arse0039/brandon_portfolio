@@ -53,3 +53,30 @@ li:hover::before {
     font-family: 'Playfair Display', sans-serif;
     margin-right: auto;
 }
+
+@media only screen and (max-width: 1200px) {
+    .nav-list {
+        display: none; /* Hide the nav links by default in mobile view */
+        flex-direction: column; /* Stack the links vertically */
+        position: absolute;
+        top: 9vh;
+        left: 70vw;
+        background-color: rgba(50, 84, 81, 0.0);
+        width: 20%;
+        text-align: center;
+        padding: 20px;
+        gap: 30px;
+    }
+
+    .nav-list.show-mobile {
+        display: flex; /* Show the nav links when the class is added */
+    }
+
+    .hamburger-icon {
+        display: block; 
+        font-size: 3.5rem;
+        color: #fff;
+        cursor: pointer;
+        margin-right: 30px;
+    }
+}
