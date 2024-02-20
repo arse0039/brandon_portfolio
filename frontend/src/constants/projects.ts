@@ -7,7 +7,7 @@ export const projects = [
     {
         projectImage: projectImage,
         projectName: "ML Music Classification",
-        projectDescription: "This is a longer description to show what it would look like if we had a really long description for one of our projects, like our AI/ML Capstone Project",
+        projectDescription: "This is a long description to see what it would look like if we had a longer description for one of our projects, like our AI/ML Capstone Project. I want to get this to about 250 chars and 50 words to see. Look at this, that is just about perfect!!!!",
         projectSkills: ["AI/ML", "React.js", "Flask"],
         github: 'https://github.com/arse0039/capstone',
     },
