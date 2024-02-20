@@ -10,11 +10,6 @@ export interface ProjectCardProps {
 }
 
 export const ProjectCard = ( project: ProjectCardProps) => {
-
-    const handleButtonClick = (link: string): void => {
-        window.open(link, '_blank');
-    };
-
     return (
         <div className="custom-card">
             <div className="image-container">
@@ -28,7 +23,7 @@ export const ProjectCard = ( project: ProjectCardProps) => {
                     <p>{project.projectDescription}</p>
                 </div>
                 <div className='card-content-button'>
-                    <button onClick={() => handleButtonClick(project.github)}>Github</button>
+                    <button onClick={() => window.open(project.github, '_blank')}>Github</button>
                 </div>
                 <div className='card-content-skills'>
                     <p>
