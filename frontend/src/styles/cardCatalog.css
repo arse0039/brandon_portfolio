@@ -16,12 +16,12 @@
     background-color: #F4F4E2 ;
     display: flex;
     flex-direction: column;
-    border: 2px solid #fff;
+    border: 2px solid #F4F4E2;
     width: 375px; 
     margin-top: 25px;
     margin-left: 30px;
     height: 500px;
-    box-shadow: 0 4px 8px #fff;
+    box-shadow: 0 4px 8px #F4F4E2;
     border-radius: 10px;
 }
 
