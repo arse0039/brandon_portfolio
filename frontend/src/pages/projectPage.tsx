@@ -1,10 +1,13 @@
 import React from 'react';
+import { projects } from '../constants/projects';
+import { CardCatalog } from '../components/CardCatalog';
 
 const ProjectPage: React.FC = () => {
     return (
-        <div>
-            <h1>Project Page</h1>
+        <div className='outer-card-container'>
+            <CardCatalog projects={projects} />
         </div>
+
     )
 }
 
