@@ -53,7 +53,7 @@ export const projects = [
     {
         projectImage: projectImage2,
         projectName: "Example Project",
-        projectDescription: "Check out our project",
+        projectDescription: "This is a long description to see what it would look like if we had a longer description for one of our projects, like our AI/ML Capstone Project. I want to get this to about 250 chars and 50 words to see. Look at this, that is just about perfect!!!!",
         projectSkills: ["React.js", "Express", "node.js"],
         github: 'https://pythontutor.com',
         url: 'https://pythontutor.com'
