@@ -1,22 +1,22 @@
-.Nav-bar {
-    background: linear-gradient(15deg,#0B1412 0%, #0B1412 80%, #325451 97%);
+.nav-bar {
+    background: linear-gradient(15deg,#000 0%, #000 80%, #325451 97%);
     position: fixed;
     width: 100%;
     height: 13vh;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
     z-index: 5;
+    padding: 0 20px;
 }
 
-.Nav-list {
-    width: 50%;
+.nav-list {
     display: flex;
     flex-wrap: wrap;
     justify-content:center;
     align-items: center;
-    margin-right: 150px;
     gap: 220px;
+    margin-right: 350px;
 }
 
 li {
@@ -36,13 +36,47 @@ li::before {
     bottom: 0;
     right: 0;
     width: 0;
-    height: 2px; /* Adjust the height of the line as needed */
-    background-color: #219EBC; /* Adjust the color of the line */
-    transition: width 0.3s ease-out; /* Add a transition for a smooth effect */
+    height: 2px; 
+    background-color: #219EBC; 
+    transition: width 0.3s ease-out; 
 }
 
 li:hover::before {
     width: 100%;
     right: auto;
     left: 0;
+}
+
+.nav-logo {
+    color: #fff;
+    font-size: 3.2rem;
+    font-family: 'Playfair Display', sans-serif;
+    margin-right: auto;
+}
+
+@media only screen and (max-width: 1200px) {
+    .nav-list {
+        display: none; /* Hide the nav links by default in mobile view */
+        flex-direction: column; /* Stack the links vertically */
+        position: absolute;
+        top: 9vh;
+        left: 70vw;
+        background-color: rgba(50, 84, 81, 0.0);
+        width: 20%;
+        text-align: center;
+        padding: 20px;
+        gap: 30px;
+    }
+
+    .nav-list.show-mobile {
+        display: flex; /* Show the nav links when the class is added */
+    }
+
+    .hamburger-icon {
+        display: block; 
+        font-size: 3.5rem;
+        color: #fff;
+        cursor: pointer;
+        margin-right: 30px;
+    }
 }

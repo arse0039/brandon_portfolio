@@ -9,7 +9,7 @@ const HomePage: React.FC = () => {
         <div className="content">
           <h1>Welcome to our website!</h1>
           <p> We are best buds and we went to school together. </p>
-          <p> New we are sad because we can't find jobs. </p>
+          <p> Now we are sad because we can't find jobs. </p>
           <p> Hire us, please.</p>
           <p> Thanks! </p>
         </div>

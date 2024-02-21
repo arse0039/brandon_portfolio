@@ -1,7 +1,7 @@
 .expandingDiv {
     position: absolute;
     background-color: #F4F4E2;
-    opacity: 0.99;
+    opacity: 0.98;
     z-index: 11;
     width: 0vw;
     border-radius: 1%;
@@ -11,18 +11,23 @@
 }
 
 .expandingDiv.expanded {
-    width: 40vw;
-    height: 45vh;
+    width: 33vw;
+    height: 65vh;
 }
 
 .exit-button {
     position: absolute;
     border: none;
-    width: 2%;
-    height: 4%;
+    width: 4%;
+    height: 6%;
     display: flex;
     align-items: center;
     justify-content: center;
     top: 0;
     right: 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    font-family: monospace;
+    background-color: #F4F4E2;
+    cursor: pointer;
 }

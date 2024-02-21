@@ -3,6 +3,7 @@
     margin: 0 15px;
     opacity: 0;
     transition: opacity 1.1s ease-in;
+    font-size: 1.3rem;
 }
 
 .modal-bio.fade {
@@ -11,4 +12,5 @@
 
 p {
     font-family:'Roboto', sans-serif;
+    font-size: 1.7rem;
 }

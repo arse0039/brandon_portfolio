@@ -4,6 +4,7 @@
     overflow: hidden;
     white-space: nowrap;
     font-family: monospace; 
+    font-size: 3.6rem;
   }
   
   .name::after {
