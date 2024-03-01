@@ -9,8 +9,7 @@ const HomePage: React.FC = () => {
         <div className="content">
           <h1>Welcome!</h1>
           <div className='home-paragraph'>
-            We are Brandon and David, two <span className="rotating-text_1">career-changers </span>
-            turned coding enthusiasts who found their passion and purpose for software engineering. <br/>
+            We are Brandon and David, two career-changers turned coding enthusiasts who found their passion and purpose for software engineering. <br/>
             We met early during our time at Oregon State and quickly became friends.  <br/>
             Our satisfaction comes not just from solving problems but from the joy of 
             collaborative innovation. <br/>
