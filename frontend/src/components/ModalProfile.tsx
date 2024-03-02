@@ -25,15 +25,21 @@ export const ModalProfile:React.FC<ModalProfile> = ({bio, isExpanded}) => {
     return (
         <div className={`modal-bio ${isVisible ? 'fade' : ''}`}>
             <h2>About</h2>
-            <p>{bio.intro}</p>
+            <p className='modal-med-heading'>{bio.intro}</p>
             <h2>Experience</h2>
-            <p>{bio.experience}</p>
+            <p className='modal-med-heading'>{bio.experience}</p>
             <h2>Skills</h2>
-            <p>{bio.skills}</p>
+            <div className='modal-skills-div'> {
+                bio.skills.map((ele, index) => (
+                    <p key={index} className='modal-skills-text'>{ele}</p>
+                ))
+                }       
+            </div>
             <h2>Education</h2>
-            <p>{bio.education}</p>
-            <h2>Links</h2>
-            <p>{bio.links}</p>
+            <p className='modal-med-heading'>{bio.education.school}</p>
+            <p className='modal-sm-text'>{bio.education.schoolInfo}</p>
+            <h2 >Links</h2>
+            <p className='modal-med-heading'>{bio.links}</p>
         </div>
     )
 }

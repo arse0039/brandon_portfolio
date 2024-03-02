@@ -1,16 +1,63 @@
-.modal-bio{
-    font-family:'Roboto', sans-serif;
+.modal-bio {
     margin: 0 15px;
     opacity: 0;
     transition: opacity 1.1s ease-in;
     font-size: 1.3rem;
+    overflow-y: auto;
+}
+
+h2 {
+    color: #fff;
+    font-family:'Playfair display', serif;
+    font-weight: 900;
+    letter-spacing: .05em;
 }
 
 .modal-bio.fade {
     opacity: 1;
 }
 
-p {
-    font-family:'Roboto', sans-serif;
-    font-size: 1.7rem;
+.modal-med-heading {
+    color: #fff;
+    font-family:'Lato', sans-serif;
+    font-weight: 350;
+    font-style: normal;
+    font-size: 1.9rem;
+}
+
+.modal-sm-text {
+    color: #fff;
+    font-family:'Lato', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 1.2rem;
+    letter-spacing: 0.01em;
+    line-height: 1.75;
+    margin-top: 0;
+    padding: 0;
+}
+
+.modal-skills-div {
+    margin: 0 15px;
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fill, minmax(min-content, 1fr));
+    gap: 20px; 
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.modal-skills-text {
+    color: #fff;
+    font-family:'Lato', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.9rem;
+    margin: 0;
+    background-color: #598392;
+    text-align: center;
+    width: fit-content;
+    padding: 5px 15px;
+    border-radius: 28px;
+    box-sizing: border-box;
 }
