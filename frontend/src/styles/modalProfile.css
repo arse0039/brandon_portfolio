@@ -17,6 +17,17 @@ h2 {
     opacity: 1;
 }
 
+.modal-about-text {
+    color: #fff;
+    font-family:'Lato', sans-serif;
+    font-weight: 350;
+    font-style: normal;
+    font-size: 1.9rem;
+    margin: 10px 15px;
+    letter-spacing: 0.02em;
+    line-height: 1;
+}
+
 .modal-med-heading {
     color: #fff;
     font-family:'Lato', sans-serif;
@@ -41,7 +52,6 @@ h2 {
     margin: 0 15px;
     display: flex;
     flex-wrap: wrap;
-    grid-template-columns: repeat(auto-fill, minmax(min-content, 1fr));
     gap: 20px; 
     align-items: center;
     justify-content: flex-start;
@@ -52,7 +62,7 @@ h2 {
     font-family:'Lato', sans-serif;
     font-weight: 300;
     font-style: normal;
-    font-size: 1.9rem;
+    font-size: 1.8rem;
     margin: 0;
     background-color: #598392;
     text-align: center;
@@ -60,4 +70,17 @@ h2 {
     padding: 5px 15px;
     border-radius: 28px;
     box-sizing: border-box;
+}
+
+.modal-socials {
+    margin: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 50px;
+}
+
+
+.modal-icon {
+    width: 2vw;
 }

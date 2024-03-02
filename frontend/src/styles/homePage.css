@@ -4,17 +4,17 @@
   align-items: center;
   height: 100vh;
   background-color: #000;
-
 }
 
 .content {
   margin-left: 100px;
   margin-bottom: 400px;
-  color:#fff;
   z-index: 1;
+  color: #8a8a8a;
 }
 
 h1 {
+  color:#fff;
   font-size: 4.5rem;
   margin: 0;
 }

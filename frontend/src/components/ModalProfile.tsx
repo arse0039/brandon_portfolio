@@ -25,7 +25,9 @@ export const ModalProfile:React.FC<ModalProfile> = ({bio, isExpanded}) => {
     return (
         <div className={`modal-bio ${isVisible ? 'fade' : ''}`}>
             <h2>About</h2>
-            <p className='modal-med-heading'>{bio.intro}</p>
+            {bio.intro.map((ele) => (
+                <p className='modal-about-text'>{ele}</p>
+            ))}
             <h2>Experience</h2>
             <p className='modal-med-heading'>{bio.experience}</p>
             <h2>Skills</h2>
@@ -38,8 +40,15 @@ export const ModalProfile:React.FC<ModalProfile> = ({bio, isExpanded}) => {
             <h2>Education</h2>
             <p className='modal-med-heading'>{bio.education.school}</p>
             <p className='modal-sm-text'>{bio.education.schoolInfo}</p>
-            <h2 >Links</h2>
-            <p className='modal-med-heading'>{bio.links}</p>
+            <h2>Let's Connect!</h2>
+            <p className='modal-med-heading'>{bio.email}</p>
+            <div className='modal-socials'>
+                {bio.socials.map((ele, index) => (
+                    <a href={ele.url} target='blank'>
+                        <img className='modal-icon' key={index} src={ele.icon} alt={`Social Icon ${index}`} />
+                    </a>
+                ))}
+            </div>
         </div>
     )
 }
