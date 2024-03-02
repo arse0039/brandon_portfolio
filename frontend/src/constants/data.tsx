@@ -18,17 +18,28 @@ const icons = {
 
 export interface Socials {
     url: string, 
-    icon:string
+    icon: string
+};
+
+export interface Educations {
+    school: string;
+    schoolInfo: string;
+    schoolDate: string;
+};
+
+export interface Experiences {
+    company: string;
+    title: string;
+    date: string;
 };
 
 export interface Profile {
-
     intro: string[];
-    experience: string;
+    experience: Experiences[];
     skills: string[];
-    education: {school:string, schoolInfo:string};
-    email:string, 
-    socials:Socials[];
+    education: Educations[];
+    email: string, 
+    socials: Socials[];
 }
 
 export const brandonProfile:Profile = {
@@ -48,12 +59,37 @@ export const brandonProfile:Profile = {
     the AWS Associate Developer Certification Exam, which I hope to take within the next month.", "When not working on \
     projects, I enjoy being outdoors cross-country skiing, hiking, or paddleboarding. I also love to \
     cook and am a big fan of Anime and personal finance."],
-    experience: "1 year. School of hard-knocks",
-    skills: ["Java", "TypeScript", "Python", "Node.js", "Agile Development"],
-    education: {
-        school:"Oregon State University",
-        schoolInfo:"Bachelors of Science in Computer Science • Dec 2023 • GPA 3.9"
-    },
+    experience: [
+        {
+            company: "Zillow",
+            title: "Sofware Development Engineer",
+            date: " • June 2023 - Sept 2023 (Internship)",
+        },
+        {
+            company: "Oregon State University",
+            title: "Undergradute Teaching Assistant",
+            date: " • Dec 2021 - Dec 2023",
+        },
+        {
+            company: "Department of Veterans Affairs",
+            title: "Registered Dietitian",
+            date: " • Aug 2018 - Jun 2023",
+        },
+    ],
+    skills: ["TypeScript", "Python", "Java", "Node.js", "React", "Express.js", "MongoDB", "SQL", "AWS", "Agile Development"],
+    education: [
+        {
+            school:"Oregon State University",
+            schoolInfo:"Bachelors of Science in Computer Science • ",
+            schoolDate: "Dec 2023 • GPA 3.9",
+        },
+        {
+            school:"University of Minnesota",
+            schoolInfo:"Bachelors of Science in Nutrition and Dietitics • ",
+            schoolDate: "Dec 2017 • GPA 3.3",
+        },
+
+    ],
     email:"arsenaub@oregonstate.edu", 
     socials:[
         {url:'https://www.linkedin.com/in/barsenault1/', icon: icons.linkedIn},
@@ -64,12 +100,19 @@ export const brandonProfile:Profile = {
 
 export const davidProfile:Profile = {
     intro: ["Hi. I like to eat, eat, eat eeples and benenees"],
-    experience: "1 year. Hogwarts school of witchcraft and wizardry",
+    experience: [
+        {
+            company: "Optum",
+            title: "Sofware Engineer • Intern • ",
+            date: "June 2023 - Sept 2023",
+        }
+    ],
     skills: ["Java", "TypeScript", "Python", "Node.js", "Agile Development" ],
-    education: {
+    education: [{
         school:"Oregon State University",
-        schoolInfo:"Bachelors of Science in Computer Science • Dec 2023 • GPA 6.0"
-    },
+        schoolInfo:"Bachelor of Science in Computer Science • ",
+        schoolDate: "Dec 2023 • GPA 6.0",
+    }],
     email:"dclaphan@oregonstate.edu", 
     socials:[
         {url:'google.com', icon: icons.linkedIn},

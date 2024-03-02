@@ -28,8 +28,15 @@ export const ModalProfile:React.FC<ModalProfile> = ({bio, isExpanded}) => {
             {bio.intro.map((ele) => (
                 <p className='modal-about-text'>{ele}</p>
             ))}
+            
             <h2>Experience</h2>
-            <p className='modal-med-heading'>{bio.experience}</p>
+                {bio.experience.map((ele, index) => (
+                    <div className="modal-general-div">
+                        <p className='modal-med-heading' key={index}>{ele.company}</p>
+                        <p className='modal-sm-text'>{ele.title}<span className='modal-sm-text-italic'>{ele.date}</span></p>
+                    </div>
+                ))}
+            
             <h2>Skills</h2>
             <div className='modal-skills-div'> {
                 bio.skills.map((ele, index) => (
@@ -37,9 +44,15 @@ export const ModalProfile:React.FC<ModalProfile> = ({bio, isExpanded}) => {
                 ))
                 }       
             </div>
+            
             <h2>Education</h2>
-            <p className='modal-med-heading'>{bio.education.school}</p>
-            <p className='modal-sm-text'>{bio.education.schoolInfo}</p>
+                {bio.education.map((ele, index) => (
+                    <div className="modal-general-div">
+                        <p className='modal-med-heading' key={index}>{ele.school}</p>
+                        <p className='modal-sm-text' key={index}>{ele.schoolInfo}<span className='modal-sm-text-italic'>{ele.schoolDate}</span></p>
+                    </div>
+                ))}
+            
             <h2>Let's Connect!</h2>
             <p className='modal-med-heading'>{bio.email}</p>
             <div className='modal-socials'>
