@@ -29,20 +29,43 @@ export const ModalProfile:React.FC<ModalProfile> = ({bio, isExpanded}) => {
                 <p className='modal-about-text'>{ele}</p>
             ))}
             
-            <h2>Experience</h2>
-                {bio.experience.map((ele, index) => (
-                    <div className="modal-general-div">
-                        <p className='modal-med-heading' key={index}>{ele.company}</p>
-                        <p className='modal-sm-text'>{ele.title}<span className='modal-sm-text-italic'>{ele.date}</span></p>
-                    </div>
-                ))}
-            
-            <h2>Skills</h2>
-            <div className='modal-skills-div'> {
-                bio.skills.map((ele, index) => (
-                    <p key={index} className='modal-skills-text'>{ele}</p>
-                ))
-                }       
+            <div className="modal-flex-div">
+                <div className="modal-flex-section">
+                <h2>Experience</h2>
+                    {bio.experience.map((ele, index) => (
+                        <div className="modal-general-div">
+                            <p className='modal-med-heading' key={index}>{ele.company}</p>
+                            <p className='modal-sm-text'>{ele.title}<span className='modal-sm-text-italic'>{ele.date}</span></p>
+                        </div>
+                    ))}
+                </div>
+                <div className="modal-flex-section">
+                    <h2>Skills</h2>
+                    <h5>Programming Languages</h5>
+                        <div className='modal-skills-div'> 
+                            {bio.skills.languages.map((ele, index) => (
+                                    <p key={index} className='modal-skills-text'>{ele}</p>
+                            ))}       
+                        </div>
+                    <h5>Frameworks & Libraries</h5>
+                        <div className='modal-skills-div'> 
+                            {bio.skills.libraries.map((ele, index) => (
+                                    <p key={index} className='modal-skills-text'>{ele}</p>
+                            ))}       
+                        </div>
+                    <h5>Databases</h5>
+                        <div className='modal-skills-div'> 
+                            {bio.skills.databases.map((ele, index) => (
+                                    <p key={index} className='modal-skills-text'>{ele}</p>
+                            ))}       
+                        </div>
+                    <h5>Other Tools & Technologies</h5>
+                        <div className='modal-skills-div'> 
+                            {bio.skills.other.map((ele, index) => (
+                                    <p key={index} className='modal-skills-text'>{ele}</p>
+                            ))}       
+                        </div>
+                </div>
             </div>
             
             <h2>Education</h2>

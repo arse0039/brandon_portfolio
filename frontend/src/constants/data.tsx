@@ -33,22 +33,29 @@ export interface Experiences {
     date: string;
 };
 
+export interface Skills {
+    languages: string[];
+    libraries: string[];
+    databases: string[];
+    other: string[];
+}
+
 export interface Profile {
     intro: string[];
     experience: Experiences[];
-    skills: string[];
+    skills: Skills;
     education: Educations[];
     email: string, 
     socials: Socials[];
 }
 
 export const brandonProfile:Profile = {
-    intro: ["Hello! I am Brandon, a recent career-changer and recent graduate from \
+    intro: ["Hello! I am Brandon, a career-changer and recent graduate from \
     Oregon State University.", "I started my professional career working as a Registered \
     Dietitian, serving Veterans at the Department of Veterans Affairs. When the Covid \
     pandemic struck, I found myself with little to do and created a personal challenge \
     to 'learn something new everyday'. This led me to discover Computer Science and I eventually\
-    started creating interactive web-based games using P5.JS. From there I was hooked! \
+    started creating interactive web-based games using P5.js. From there I was hooked! \
     I found myself learning and writing code nearly everyday. After a few months I realized \
     that I had found my passion and decided to start my career-change journey.", "During my return to school, I continued \
     working full time as a Dietitian and, following my first quarter, I realized that my love for CS was \
@@ -58,7 +65,7 @@ export const brandonProfile:Profile = {
     with my good friend David so that we can both continue to learn and grow. I am also studying to take \
     the AWS Associate Developer Certification Exam, which I hope to take within the next month.", "When not working on \
     projects, I enjoy being outdoors cross-country skiing, hiking, or paddleboarding. I also love to \
-    cook and am a big fan of Anime and personal finance."],
+    cook and am a big fan of anime and personal finance."],
     experience: [
         {
             company: "Zillow",
@@ -76,7 +83,12 @@ export const brandonProfile:Profile = {
             date: " • Aug 2018 - Jun 2023",
         },
     ],
-    skills: ["TypeScript", "Python", "Java", "Node.js", "React", "Express.js", "MongoDB", "SQL", "AWS", "Agile Development"],
+    skills: {
+        languages:["TypeScript", "Python", "Javascript", "Java", "HTML", "CSS"],
+        libraries:["Node.js", "React", "Express.js", "Redux", "Flask"],
+        databases:["MongoDB", "SQL", "DynamoDB"],
+        other:["AWS", "Git", "Jira", "GraphQL", "Agile Development", "Rest APIs"]
+    },
     education: [
         {
             school:"Oregon State University",
@@ -88,7 +100,6 @@ export const brandonProfile:Profile = {
             schoolInfo:"Bachelors of Science in Nutrition and Dietitics • ",
             schoolDate: "Dec 2017 • GPA 3.3",
         },
-
     ],
     email:"arsenaub@oregonstate.edu", 
     socials:[
@@ -107,7 +118,12 @@ export const davidProfile:Profile = {
             date: "June 2023 - Sept 2023",
         }
     ],
-    skills: ["Java", "TypeScript", "Python", "Node.js", "Agile Development" ],
+    skills: {
+        languages:["tbd"],
+        libraries:["tbd"],
+        databases:["tbd"],
+        other:["tbd"]
+    },
     education: [{
         school:"Oregon State University",
         schoolInfo:"Bachelor of Science in Computer Science • ",
