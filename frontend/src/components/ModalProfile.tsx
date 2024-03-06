@@ -41,30 +41,32 @@ export const ModalProfile:React.FC<ModalProfile> = ({bio, isExpanded}) => {
                 </div>
                 <div className="modal-flex-section">
                     <h2>Skills</h2>
-                    <h5>Programming Languages</h5>
-                        <div className='modal-skills-div'> 
-                            {bio.skills.languages.map((ele, index) => (
-                                    <p key={index} className='modal-skills-text'>{ele}</p>
-                            ))}       
-                        </div>
-                    <h5>Frameworks & Libraries</h5>
-                        <div className='modal-skills-div'> 
-                            {bio.skills.libraries.map((ele, index) => (
-                                    <p key={index} className='modal-skills-text'>{ele}</p>
-                            ))}       
-                        </div>
-                    <h5>Databases</h5>
-                        <div className='modal-skills-div'> 
-                            {bio.skills.databases.map((ele, index) => (
-                                    <p key={index} className='modal-skills-text'>{ele}</p>
-                            ))}       
-                        </div>
-                    <h5>Other Tools & Technologies</h5>
-                        <div className='modal-skills-div'> 
-                            {bio.skills.other.map((ele, index) => (
-                                    <p key={index} className='modal-skills-text'>{ele}</p>
-                            ))}       
-                        </div>
+                    <div className='modal-skills-wrapper'>
+                        <h5>Programming Languages</h5>
+                            <div className='modal-skills-div'> 
+                                {bio.skills.languages.map((ele, index) => (
+                                        <p key={index} className='modal-skills-text'>{ele}</p>
+                                ))}       
+                            </div>
+                        <h5>Frameworks & Libraries</h5>
+                            <div className='modal-skills-div'> 
+                                {bio.skills.libraries.map((ele, index) => (
+                                        <p key={index} className='modal-skills-text'>{ele}</p>
+                                ))}       
+                            </div>
+                        <h5>Databases</h5>
+                            <div className='modal-skills-div'> 
+                                {bio.skills.databases.map((ele, index) => (
+                                        <p key={index} className='modal-skills-text'>{ele}</p>
+                                ))}       
+                            </div>
+                        <h5>Other Tools & Technologies</h5>
+                            <div className='modal-skills-div'> 
+                                {bio.skills.other.map((ele, index) => (
+                                        <p key={index} className='modal-skills-text'>{ele}</p>
+                                ))}       
+                            </div>
+                    </div>
                 </div>
             </div>
             
@@ -80,7 +82,7 @@ export const ModalProfile:React.FC<ModalProfile> = ({bio, isExpanded}) => {
             <p className='modal-med-heading'>{bio.email}</p>
             <div className='modal-socials'>
                 {bio.socials.map((ele, index) => (
-                    <a href={ele.url} target='blank'>
+                    <a href={ele.url} target={`_blank_${index}`} rel="noopener noreferrer" key={index}>
                         <img className='modal-icon' key={index} src={ele.icon} alt={`Social Icon ${index}`} />
                     </a>
                 ))}

@@ -27,7 +27,7 @@ h2 {
 
 .modal-flex-section {
     max-width: 48%;
-    padding: 0 10px;
+    padding: 0 0px;
     height: auto;
 }
 
@@ -122,7 +122,10 @@ h5 {
     gap: 50px;
 }
 
-
 .modal-icon {
     width: 2vw;
+}
+
+.modal-skills-wrapper {
+    margin: 0 15px;
 }
