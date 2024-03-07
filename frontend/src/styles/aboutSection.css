@@ -3,14 +3,14 @@
     margin: 10px 15px;
     overflow: hidden;
     white-space: nowrap;
-    font-family: monospace; 
+    font-family: 'Playfair display'; 
     font-size: 3.6rem;
   }
   
   .name::after {
     content: '|';
     display: inline-block;
-    animation: cursorBlink 1s infinite step-start;
+    animation: cursorBlink 1.5s infinite step-start;
   }
   
   @keyframes cursorBlink {
