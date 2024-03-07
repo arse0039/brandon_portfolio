@@ -9,13 +9,13 @@ const HomePage: React.FC = () => {
         <div className="content">
           <h1>Welcome!</h1>
           <div className='home-paragraph'>
-            We are Brandon and David, two career-changers turned coding enthusiasts who found their passion and purpose for software engineering. <br/>
-            We met early during our time at Oregon State and quickly became friends.  <br/>
-            Our satisfaction comes not just from solving problems but from the joy of 
-            collaborative innovation. <br/>
-            We are excited that you are here to explore our journey. <br/>
-            As we continue to grow and learn, so does this space. <br/>
-            Join us as we continue to build extraordinary things together! <br/>
+            <p> We are Brandon and David, two career-changers turned coding enthusiasts 
+            who found our passion and purpose for software engineering. </p>
+            <p> We met early during our time at Oregon State and quickly became friends, finding 
+              satisfaction from solving problems and from the joy of collaborative innovation. </p>
+            <p> We are excited that you are here to explore our journey and, as 
+              we continue to grow and learn, so does this space. </p>
+            <p>Join us as we continue to build <span id='home-emphasis'>extraordinary</span> things together! </p>
           </div>
         </div>
       </div>
