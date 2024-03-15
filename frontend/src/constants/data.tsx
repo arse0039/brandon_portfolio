@@ -69,12 +69,12 @@ export const brandonProfile:Profile = {
     experience: [
         {
             company: "Zillow",
-            title: "Sofware Development Engineer",
+            title: "Software Development Engineer",
             date: " • June 2023 - Sept 2023 (Internship)",
         },
         {
             company: "Oregon State University",
-            title: "Undergradute Teaching Assistant",
+            title: "Undergraduate Teaching Assistant",
             date: " • Dec 2021 - Dec 2023",
         },
         {
@@ -110,28 +110,62 @@ export const brandonProfile:Profile = {
 
 
 export const davidProfile:Profile = {
-    intro: ["Hi. I like to eat, eat, eat eeples and benenees"],
+    intro: ["After 8 years in Business Operations as a Project Manager, People Manager, and Data Analyst, I embraced my passion for technology \
+    and problem-solving and returned to school to pursue a degree in Computer Science.", " Working in Business Ops \
+    I often had the opportunity to collaborate with software engineering teams. I always had an appreciation \
+    for their contribution to the projects we worked on and thought it would be interesting to be on that side of the work,\
+    actually ‘building’ the ideas that the business had come up with. Two years ago I started actively working \
+    towards making the switch to a career as a Software Engineer by returning to school to pursue a degree in Computer \
+    Science at Oregon State University.", "Over the course of my degree program, I worked full-time, held a part-time position as a teaching \
+    assistant, and last summer I had a successful software engineering internship where I got professional experience working on a full-stack \
+    project. I returned to school following the intership and graduated in December.", "In addition to working on projects with Brandon, I'm now \
+    looking for a full-time Software Engineer position, preferably based in San Francisco or the San Francisco Bay Area, but \
+    I am also open to positions in the Los Angeles or Chicago metro areas, or fully remote positions. Let's connect and explore how my past experience, passion \
+    for problem-solving, and dedication to technology can contribute to your team's success."    
+    ],
     experience: [
         {
-            company: "Optum",
-            title: "Sofware Engineer • Intern • ",
-            date: "June 2023 - Sept 2023",
+            company: "Optum (UnitedHealth Group)",
+            title: "Software Engineer • Intern • ",
+            date: "June 2023 - Aug 2023",
+        },
+        {
+            company: "Oregon State University",
+            title: "Undergraduate Teaching Assistant • ",
+            date: "Jan 2023 - June 2023",
+        },
+        {
+            company: "Narvar",
+            title: "Revenue Operations Analyst • ",
+            date: "Jan 2021 - Jan 2023",
+        },
+        {
+            company: "Beam Suntory",
+            title: "Project Manager • People Manager • ",
+            date: "Dec 2016 - Jan 2021",
         }
     ],
     skills: {
-        languages:["tbd"],
-        libraries:["tbd"],
-        databases:["tbd"],
-        other:["tbd"]
+        languages:["Python", "SQL", "TypeScript", "JavaScript", "C", "Java"],
+        libraries:["React", "Node.js", "Flask", "Express.js"],
+        databases:["MySQL", "MongoDB", "Google Firestore", "CosmosDB"],
+        other:["Git", "Agile Development", "Google Cloud", "REST APIs", "Test Driven Development", "TensorFlow"]
     },
-    education: [{
+    education: [
+        {
         school:"Oregon State University",
         schoolInfo:"Bachelor of Science in Computer Science • ",
-        schoolDate: "Dec 2023 • GPA 6.0",
-    }],
-    email:"dclaphan@oregonstate.edu", 
+        schoolDate: "Dec 2023 • GPA 4.0",
+        },
+        {
+            school:"University of Wisconsin - Madison",
+            schoolInfo:"Bachelor of Science in Political Science & History • ",
+            schoolDate: "May 2015 • GPA 3.1",
+        }
+    ],
+    email:"davidclaphan@gmail.com", 
     socials:[
-        {url:'google.com', icon: icons.linkedIn},
-        {url: 'google.com', icon: icons.github},        
+        {url:'https://www.linkedin.com/in/david-claphan', icon: icons.linkedIn},
+        {url: 'https://github.com/davidclaphan', icon: icons.github},        
     ],
 }
