@@ -1,4 +1,5 @@
 import '../styles/cardCatalog.css';
+import github from '../assets/Github_white.png';
 
 export interface ProjectCardProps {
     projectImage: string;
@@ -23,11 +24,11 @@ export const ProjectCard = ( project: ProjectCardProps) => {
                     {project.projectDescription}
                 </div>
                 <div className='card-content-button'>
-                    <button onClick={() => window.open(project.github, '_blank')}>Github</button>
+                    <img src={github} alt='Github' onClick={() => window.open(project.github, '_blank')} className='github-image' />
                 </div>
                 <div className='card-content-skills'>
                         {project.projectSkills?.map((skill, index) => (
-                            <span key={index} className='skill'>{skill}  </span>
+                            <span key={index} className='skill'>{skill}&nbsp;&nbsp;&nbsp;&nbsp;</span>
                         ))}
                 </div>
             </div>

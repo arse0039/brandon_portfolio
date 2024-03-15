@@ -1,7 +1,7 @@
 .outer-card-container {
     background-color: #0B1412;
-    width: 100vw;
-    height: 175vh;
+    width: auto;
+    height: 100vh;
 }
 
 .card-container {
@@ -10,25 +10,28 @@
     background-color: #0B1412;
     width: auto;
     height: auto;
-    padding-top: 165px;
+    padding-top: 200px;
+    padding-bottom: 50px;
+    padding-left: 50px;
 }
 
 .custom-card {
-    background-color: #F4F4E2 ;
+    background-color: #124559;
+    color: #fff;
     display: flex;
     flex-direction: column;
-    border: 2px solid #F4F4E2;
+    border: 2px solid #595959;
     width: 375px; 
     margin-top: 30px;
     margin-left: 35px;
     height: 500px;
-    box-shadow: 0 4px 8px #F4F4E2;
+    box-shadow: 0 4px 8px #999999;
     border-radius: 10px;
 }
 
 .custom-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 16px #F4F4E2;
+    box-shadow: 0 8px 16px #595959;
 }
 
 .image-container img {
@@ -60,6 +63,11 @@
 
 .card-content-button {
     height: 30px;
+}
+
+.github-image {
+    width: 25px;
+    height: 25px;
 }
 
 .card-content-skills {
