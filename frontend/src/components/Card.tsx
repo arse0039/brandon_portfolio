@@ -24,7 +24,7 @@ export const ProjectCard = ( project: ProjectCardProps) => {
                     {project.projectDescription}
                 </div>
                 <div className='card-content-button'>
-                    <img src={github} alt='Github' onClick={() => window.open(project.github, '_blank')} className='github-image' />
+                    <img src={github} alt='Github' onClick={() => window.open(project.github, '_blank')} className='github-image' style={{cursor: 'pointer'}} />
                 </div>
                 <div className='card-content-skills'>
                         {project.projectSkills?.map((skill, index) => (
