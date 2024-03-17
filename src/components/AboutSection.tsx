@@ -28,7 +28,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({name, isExpanded}) => {
     },[name]);
 
     const getProfile = (name:string):Profile => {
-        if (name == 'David Claphan'){
+        if (name === 'David Claphan'){
             return davidProfile;
         } else {
             return brandonProfile;
