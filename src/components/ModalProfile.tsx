@@ -2,12 +2,12 @@ import React, {useState, useEffect} from 'react';
 import { Profile } from '../constants/data';
 import '../styles/modalProfile.css';
 
-interface ModalProfile {
+interface ModalProfileProps {
     bio: Profile;
     isExpanded: boolean;
 }
 
-export const ModalProfile:React.FC<ModalProfile> = ({bio, isExpanded}) => {
+export const ModalProfile:React.FC<ModalProfileProps> = ({bio, isExpanded}) => {
     const [isVisible, setIsVisible] = useState<boolean>(false);
 
     useEffect(() => {

@@ -50,21 +50,18 @@ export interface Profile {
 }
 
 export const brandonProfile:Profile = {
-    intro: ["Hello! I am Brandon, a career-changer and recent graduate from \
-    Oregon State University.", "I started my professional career working as a Registered \
-    Dietitian, serving Veterans at the Department of Veterans Affairs. When the Covid \
-    pandemic struck, I found myself with little to do and created a personal challenge \
-    to 'learn something new everyday'. This led me to discover Computer Science and I eventually\
-    started creating interactive web-based games using P5.js. From there I was hooked! \
-    I found myself learning and writing code nearly everyday. After a few months I realized \
-    that I had found my passion and decided to start my career-change journey.", "During my return to school, I continued \
-    working full time as a Dietitian and, following my first quarter, I realized that my love for CS was \
+    intro: ["Hello! I am Brandon, a career-changer and recent graduate from Oregon State University.", 
+    "I started my professional career working as a Registered Dietitian, serving Veterans at the Department of Veterans Affairs. When the Covid \
+    pandemic struck, I found myself with little to do and created a personal challenge to 'learn something new everyday'. This led me to discover Computer Science and I eventually\
+    started creating interactive web-based games using P5.js. From there I was hooked! I found myself learning and writing code nearly everyday. After a few months I realized \
+    that I had found my passion and decided to start my career-change journey.", 
+    "During my return to school, I continued working full time as a Dietitian and, following my first quarter, I realized that my love for CS was \
     leading me to help many of my peers. I was getting a lot of joy connecting with and helping \
-    other students so I decided to take on a part-time role as a Teaching Assistant.", "Currently, \
-    I am looking for a full-time role as a software engineer. While searching, I continue to collaborate \
+    other students so I decided to take on a part-time role as a Teaching Assistant.", 
+    "Currently, I am looking for a full-time role as a software engineer. While searching, I continue to collaborate \
     with my good friend David so that we can both continue to learn and grow. I am also studying to take \
-    the AWS Associate Developer Certification Exam, which I hope to take within the next month.", "When not working on \
-    projects, I enjoy being outdoors cross-country skiing, hiking, or paddleboarding. I also love to \
+    the AWS Associate Developer Certification Exam, which I hope to take within the next month.", 
+    "When not working on projects, I enjoy being outdoors cross-country skiing, hiking, or paddleboarding. I also love to \
     cook and am a big fan of anime and personal finance."],
     experience: [
         {
@@ -110,6 +107,7 @@ export const brandonProfile:Profile = {
 
 
 export const davidProfile:Profile = {
+    // eslint-disable-next-line
     intro: ["After 8 years in Business Operations as a Project Manager, People Manager, and Data Analyst, I embraced my passion for technology \
     and problem-solving and returned to school to pursue a degree in Computer Science.", " Working in Business Ops \
     I often had the opportunity to collaborate with software engineering teams. I always had an appreciation \
