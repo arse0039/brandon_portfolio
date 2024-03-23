@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "../styles/aboutModal.css";
 import AboutSection from "./AboutSection";
 
@@ -14,13 +14,22 @@ const AboutModal: React.FC<AboutModalProps> = ({
   handleModalClose,
 }) => {
   let isExpanded = davidClicked || brandonClicked;
+  const expandingDivRef = useRef<HTMLDivElement>(null);
   let name: string = "";
+
   if (davidClicked) {
     name = "David Claphan";
   }
   if (brandonClicked) {
     name = "Brandon Arsenault";
   }
+
+  // Ensure that the modal div scrolls back to the top between profile clicks
+  useEffect(() => {
+    if (isExpanded && expandingDivRef.current) {
+      expandingDivRef.current.scrollTop = 0;
+    }
+  }, [isExpanded]);
 
   const handleExitButtonClick = () => {
     davidClicked ? handleModalClose("david") : handleModalClose("brandon");
@@ -31,7 +40,10 @@ const AboutModal: React.FC<AboutModalProps> = ({
       className={`modal-wrapper ${isExpanded ? "expanded" : ""}`}
       onClick={handleExitButtonClick}
     >
-      <div className={`expandingDiv ${isExpanded ? "expanded" : ""}`}>
+      <div
+        className={`expandingDiv ${isExpanded ? "expanded" : ""}`}
+        ref={expandingDivRef}
+      >
         {/* <button className="exit-button" onClick={handleExitButtonClick}>
           {" "}
           X{" "}
