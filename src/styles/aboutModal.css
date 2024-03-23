@@ -1,40 +1,54 @@
 .expandingDiv {
-    color: #fff;
-    position: absolute;
-    /* background-color: #F4F4E2; */
-    background-color: #124559;
-    opacity: 0.88;
-    z-index: 11;
-    width: 0vw;
-    border-radius: 1%;
-    height: 0vh; 
-    transition: width 0.4s ease-out, height 0.9s ease-in;
-    overflow-y: auto;
+  color: #fff;
+  position: absolute;
+  background-color: #124559;
+  opacity: 0.88;
+  z-index: 100;
+  width: 0vw;
+  border-radius: 1%;
+  height: 0vh;
+  transition: width 0.4s ease-out, height 0.9s ease-in;
+  overflow-y: auto;
 }
 
 .expandingDiv.expanded {
-    width: 43vw;
-    height: 65vh;
+  width: 43vw;
+  height: 65vh;
 }
 
 .exit-button {
-    color: #fff;
-    position: absolute;
-    border: none;
-    width: 4%;
-    height: 6%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    top: 0;
-    right: 10px;
-    font-size: 2.0rem;
-    font-weight: bold;
-    font-family: monospace;
-    background-color: #124559;
-    cursor: pointer;
+  color: #fff;
+  position: absolute;
+  border: none;
+  width: 4%;
+  height: 6%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 10px;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: monospace;
+  background-color: #124559;
+  cursor: pointer;
 }
 
 .exit-button:hover {
-    background-color: #598392;
+  background-color: #598392;
+}
+
+.modal-wrapper {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.modal-wrapper.expanded {
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
 }
