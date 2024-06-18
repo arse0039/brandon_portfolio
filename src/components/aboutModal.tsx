@@ -1,30 +1,37 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, Dispatch, SetStateAction } from "react";
 import "../styles/aboutModal.css";
 import AboutSection from "./AboutSection";
 
 interface AboutModalProps {
   handleModalClose: () => void;
+  setIsExpanded: Dispatch<SetStateAction<boolean>>;
   brandonClicked: boolean;
+  isExpanded: boolean;
 }
 
 const AboutModal: React.FC<AboutModalProps> = ({
   brandonClicked,
+  isExpanded,
+  setIsExpanded,
   handleModalClose,
 }) => {
-  let isExpanded = brandonClicked;
+
   const expandingDivRef = useRef<HTMLDivElement>(null);
   let name: string = "Brandon Arsenault";
 
   // Ensure that the modal div scrolls back to the top between profile clicks
   useEffect(() => {
-    if (isExpanded && expandingDivRef.current) {
+    if (brandonClicked && expandingDivRef.current) {
       expandingDivRef.current.scrollTop = 0;
     }
-  }, [isExpanded]);
+  }, [brandonClicked]);
 
   const handleExitButtonClick = () => {
     name = "";
     handleModalClose();
+    setTimeout(() => {
+      setIsExpanded(false); 
+    }, 400);
   };
 
   return (
@@ -33,10 +40,10 @@ const AboutModal: React.FC<AboutModalProps> = ({
       onClick={handleExitButtonClick}
     >
       <div
-        className={`expandingDiv ${isExpanded ? "expanded" : ""}`}
+        className={`expandingDiv ${brandonClicked ? "expanded" : ""}`}
         ref={expandingDivRef}
       >
-        <AboutSection name={name} isExpanded={isExpanded} />
+        <AboutSection name={name} isExpanded={brandonClicked} />
       </div>
     </div>
   );

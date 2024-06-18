@@ -1,6 +1,6 @@
 .expandingDiv {
   color: #fff;
-  position: absolute;
+  position: fixed;
   background-color: #124559;
   opacity: 0.88;
   z-index: 100;
@@ -16,39 +16,15 @@
   height: 65vh;
 }
 
-.exit-button {
-  color: #fff;
-  position: absolute;
-  border: none;
-  width: 4%;
-  height: 6%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  top: 0;
-  right: 10px;
-  font-size: 2rem;
-  font-weight: bold;
-  font-family: monospace;
-  background-color: #124559;
-  cursor: pointer;
-}
-
-.exit-button:hover {
-  background-color: #598392;
-}
-
 .modal-wrapper {
-  position: absolute;
-  display: flex;
+  position: fixed;
   justify-content: center;
   align-items: center;
   z-index: 10;
 }
 
 .modal-wrapper.expanded {
+  display: flex;
   height: 100vh;
   width: 100vw;
-  top: 0;
-  left: 0;
 }

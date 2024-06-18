@@ -6,10 +6,12 @@ import '../styles/homePage.css';
 
 const HomePage = ({handleModalClick}:{handleModalClick: () => void;}) => {
   const [brandonClick, setBrandonClick] = useState<boolean>(false);
+  const [isExpanded, setIsExpanded] = useState<boolean>(false);
 
   const handleAvatarClick = (event: React.MouseEvent<HTMLDivElement>) => {
     handleModalClick();
     setBrandonClick(true);
+    setIsExpanded(true);
   };
 
   const handleModalClose = (): void => {
@@ -32,7 +34,9 @@ const HomePage = ({handleModalClick}:{handleModalClick: () => void;}) => {
           </div>
           <AboutModal
               brandonClicked={brandonClick}
+              isExpanded={isExpanded}
               handleModalClose={handleModalClose}
+              setIsExpanded={setIsExpanded}
               />
           <div className="profile-content">
               <div className="about-individual">
