@@ -3,26 +3,17 @@ import "../styles/aboutModal.css";
 import AboutSection from "./AboutSection";
 
 interface AboutModalProps {
-  handleModalClose: (name: string) => void;
-  davidClicked: boolean;
+  handleModalClose: () => void;
   brandonClicked: boolean;
 }
 
 const AboutModal: React.FC<AboutModalProps> = ({
-  davidClicked,
   brandonClicked,
   handleModalClose,
 }) => {
-  let isExpanded = davidClicked || brandonClicked;
+  let isExpanded = brandonClicked;
   const expandingDivRef = useRef<HTMLDivElement>(null);
-  let name: string = "";
-
-  if (davidClicked) {
-    name = "David Claphan";
-  }
-  if (brandonClicked) {
-    name = "Brandon Arsenault";
-  }
+  let name: string = "Brandon Arsenault";
 
   // Ensure that the modal div scrolls back to the top between profile clicks
   useEffect(() => {
@@ -32,7 +23,8 @@ const AboutModal: React.FC<AboutModalProps> = ({
   }, [isExpanded]);
 
   const handleExitButtonClick = () => {
-    davidClicked ? handleModalClose("david") : handleModalClose("brandon");
+    name = "";
+    handleModalClose();
   };
 
   return (
@@ -44,10 +36,6 @@ const AboutModal: React.FC<AboutModalProps> = ({
         className={`expandingDiv ${isExpanded ? "expanded" : ""}`}
         ref={expandingDivRef}
       >
-        {/* <button className="exit-button" onClick={handleExitButtonClick}>
-          {" "}
-          X{" "}
-        </button> */}
         <AboutSection name={name} isExpanded={isExpanded} />
       </div>
     </div>

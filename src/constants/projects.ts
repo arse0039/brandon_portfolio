@@ -14,6 +14,16 @@ export const projects = [
     },
     {
         projectImage: databaseProject,
+        projectName: "Issue Tracking Application",
+        projectDescription: "A web application built to help users create projects and manage tasks and issues across those \
+        projects. Built using Next.js, Typescript it uses a distributed, serverless backend powered by multiple AWS cloud services \
+        including API Gatweway, Lambda, DynamoDB, and Cognito.",
+        projectSkills: ["AWS", "Tailwind CSS", "Typescript", "AWS Lambda", "AWS Cognito"],
+        github: 'https://github.com/BAPortfolioHub/issue-tracker',
+        url: 'https://issue-tracker-ten-theta.vercel.app/'
+    },
+    {
+        projectImage: databaseProject,
         projectName: "Database Management Web Application",
         projectDescription: "A database management tool meant to be used by database administrators to manage a \
         community-driven recreation service. A SQL database holds information related to 5 different entities and supports \

@@ -1,21 +1,53 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { AnimatedBackground } from '../components/AnimatedBackground';
+import AboutModal from '../components/aboutModal';
+import brandonImage from "../assets/BArsenault.jpg";
 import '../styles/homePage.css';
 
-const HomePage: React.FC = () => {
+const HomePage = ({handleModalClick}:{handleModalClick: () => void;}) => {
+  const [brandonClick, setBrandonClick] = useState<boolean>(false);
+
+  const handleAvatarClick = (event: React.MouseEvent<HTMLDivElement>) => {
+    handleModalClick();
+    setBrandonClick(true);
+  };
+
+  const handleModalClose = (): void => {
+    setBrandonClick(false);
+    handleModalClick();
+  };
+
     return (
       <div className="home-page">
-        <AnimatedBackground /> 
-        <div className="content">
-          <h1>Welcome!</h1>
-          <div className='home-paragraph'>
-            <p> We are Brandon and David, two career-changers turned coding enthusiasts 
-            who found our passion and purpose for software engineering. </p>
-            <p> We met early during our time at Oregon State and quickly became friends, finding 
-              satisfaction from solving problems and from the joy of collaborative innovation. </p>
-            <p> We are excited that you are here to explore our journey and, as 
-              we continue to grow and learn, so does this space. </p>
-            <p>Join us as we continue to build <span id='home-emphasis'>extraordinary</span> things together! </p>
+        <AnimatedBackground />
+        <div className="main-content">
+          <div className="content">
+            <h1>You're here!</h1>
+            <div className='home-paragraph'>
+              <p> I'm Brandon, a career-changer turned coding enthusiasts 
+              who found a passion and purpose for software engineering. </p>
+              <p> I love to build, collaborate, <span id='home-emphasis'>learn</span>, and grow. </p>
+              <p> I am are excited that you are here to to explore my journey and see some of the work I have done! </p>
+            </div>
+          </div>
+          <AboutModal
+              brandonClicked={brandonClick}
+              handleModalClose={handleModalClose}
+              />
+          <div className="profile-content">
+              <div className="about-individual">
+                <div
+                  id={`avatar-brandon${brandonClick ? "-clicked" : ""}`}
+                  className="avatar-div"
+                  onClick={handleAvatarClick}
+                >
+                  <img
+                    className="circular-avatar-image"
+                    src={brandonImage}
+                    alt="Brandon"
+                  />
+                </div>
+              </div>
           </div>
         </div>
       </div>

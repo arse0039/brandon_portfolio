@@ -1,39 +1,88 @@
 .home-page {
-  display: grid;
-  justify-content:left;
-  align-items: center;
-  height: 87vh;
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
   background-color: #000;
-  min-height: 87vh;
   padding-top: 13vh;
 }
 
+.main-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch; 
+  width: 100%; 
+}
+
 .content {
-  margin-left: 100px;
-  margin-bottom: 400px;
-  max-width: 45vw;
-  min-width: 30vw;
+  flex: 1; 
+  max-width: 50%; 
+  min-width: 30vw; 
   z-index: 1;
   color: #b8b8b8;
+  padding: 0 50px; 
 }
 
 h1 {
-  color:#fff;
+  color: #fff;
   font-size: 4.5rem;
   margin: 0;
   opacity: 0.9;
 }
 
 .home-paragraph {
-  font-size: 2.0rem;
+  font-size: 2rem;
   line-height: 3rem;
 }
 
 p {
-  margin: 6px 25px;
+  margin: 6px 0;
   padding: 6px 0;
 }
 
-#home-emphasis{
-  color:#219EBC;
+#home-emphasis {
+  color: #219EBC;
+}
+
+.profile-content {
+  flex: 1; /* Take up 50% of the width */
+  max-width: 50%; /* Limit to 50% of the width */
+  min-width: 30vw; /* Minimum width */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-div {
+  display: flex;
+  border-radius: 50%;
+  width: 20vw;
+  height: 20vw;
+  max-width: 400px;
+  max-height: 400px;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.13s ease-in-out, transform 0.8s ease-in-out;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.avatar-div:hover {
+  box-shadow: 0 0 65px 8px rgba(95, 153, 149, 0.5);
+}
+
+#avatar-brandon {
+  transform: translateX(0) scale(1);
+}
+
+#avatar-brandon-clicked {
+  transform: translateX(200px) scale(0.5);
+}
+
+.circular-avatar-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid #000;
 }

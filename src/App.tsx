@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { NavBar } from './components/NavBar';
 import { navLinks } from './constants/data';
 import HomePage from './pages/homePage';
-import AboutPage from './pages/aboutPage';
 import ProjectPage from './pages/projectPage';
 import TranslucentModalDiv from './components/TranslucentModalDiv';
 
@@ -23,10 +22,7 @@ const App: React.FC = () => {
       {displayModal && <TranslucentModalDiv/>}     
       <NavBar navArray={navLinks} handleClick={handleLinkClick}/>
 
-      {displayedPage === 'Home' && <HomePage/>}
-
-      {displayedPage === 'About' && <AboutPage 
-        handleModalClick={handleModalClick}/>}
+      {displayedPage === 'Home' && <HomePage handleModalClick={handleModalClick}/>}
         
       {displayedPage === 'Projects' && <ProjectPage/>}
     </div>

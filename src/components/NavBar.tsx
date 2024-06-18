@@ -16,7 +16,7 @@ export const NavBar:React.FC<NavBarProps>= ( {navArray, handleClick} ) => {
 
     return (
         <nav className='nav-bar'>
-            <div className='nav-logo'>BA/DC</div>
+            <div className='nav-logo'>BA</div>
             <div className='hamburger-icon' onClick={toggleMobile}>
                 ☰
             </div>
