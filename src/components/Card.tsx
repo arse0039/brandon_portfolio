@@ -11,8 +11,14 @@ export interface ProjectCardProps {
 }
 
 export const ProjectCard = ( project: ProjectCardProps) => {
+    const handleCardClick = () => {
+        if (project.url) {
+            window.open(project.url, '_blank')
+        }
+    }
+
     return (
-        <div className="custom-card">
+        <div className="custom-card" onClick={handleCardClick} style={{cursor: project.url ? 'pointer' : 'default'}}>
             <div className="image-container">
                 <img src={project.projectImage} alt={project.projectName}></img>
             </div>

@@ -1,6 +1,7 @@
 // import project images from assets folder here
 import mlCapstone from '../assets/ML_generic.jpg';
 import databaseProject from '../assets/DB_generic.png';
+import fullStack from '../assets/fullstack_generic.jpeg';
 
 export const projects = [
     {
@@ -31,4 +32,14 @@ export const projects = [
         projectSkills: ["React.js", "JavaScript", "SQL", "node.js"],
         github: 'https://github.com/arse0039/uffda_react_app',
     },
+    {
+        projectImage: fullStack,
+        projectName: "Portfolio Website",
+        projectDescription: "The website you are looking at right now! Built to showcase both my projects as \
+        well as my front-end development work. The site uses React hooks to manage state and CSS to for styling. ",
+        projectSkills: ["React", "TypeScript", "CSS"],
+        github: 'https://github.com/arse0039/brandon_portfolio',
+        url: 'https://brandon-portfolio-silk.vercel.app/'
+    },
+    
 ]
