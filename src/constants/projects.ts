@@ -14,6 +14,16 @@ export const projects = [
         github: 'https://github.com/arse0039/capstone',
     },
     {
+        projectImage: fullStack,
+        projectName: "Virtual Office Hour Queue Manager",
+        projectDescription: "A web application built to solve the frustration of managing virtual office hours for teaching assistants \
+        and instructors. Users can log in, generate a office hour session URL, and provide this URL to students who can fill out a \
+        form, which adds them to the office hour and queue.",
+        projectSkills: ["Serverless", "AWS", "Next.js", "TypeScript", "Tailwind CSS", "REST APIs", "Websockets", "Auth"],
+        github: 'https://github.com/arse0039/aws_queue_manager',
+        url: 'https://main.d1oeosxn0q93mx.amplifyapp.com/'
+    },
+    {
         projectImage: databaseProject,
         projectName: "Issue Tracking Application",
         projectDescription: "A web application built to help users create projects and manage tasks and issues across those \
@@ -39,7 +49,7 @@ export const projects = [
         well as my front-end development work. The site uses React hooks to manage state and CSS to for styling. ",
         projectSkills: ["React", "TypeScript", "CSS"],
         github: 'https://github.com/arse0039/brandon_portfolio',
-        url: 'https://brandon-portfolio-silk.vercel.app/'
+        url: 'brandon-portfolio-lake.vercel.app/'
     },
     
 ]
