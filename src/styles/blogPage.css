@@ -1,0 +1,9 @@
+.blog-page {
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    background-color: #000;
+    padding-top: 13vh;
+    height: 100vh;
+    color: #fff
+  }

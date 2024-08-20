@@ -8,6 +8,7 @@ export interface NavLink {
 export const navLinks: NavLink[] = [
   { name: "Home" },
   { name: "Projects" },
+  { name: "Blog" }
 ];
 
 const icons = {
